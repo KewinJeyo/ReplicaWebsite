@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1</title>
+</head>
+<style>
+    .landing {
+        background-color: rgb(36, 132, 188);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        list-style-type: none;
+        padding: 20px;
+
+    }
+
+    .landing a:hover {
+        color: rgb(38, 27, 87);
+    }
+
+    .landing a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: flex;
+    }
+
+    .pic {
+        color: rgb(46, 5, 5);
+        font-size: 25px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        height: 300px;
+
+        background: url("bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+
+    }
+
+    .pic button {
+        color: rgb(0, 132, 255);
+        background-color: white;
+        font-weight: bold;
+        border-color: white;
+        padding: 8px;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    .About {
+        color: black;
+        text-align: center;
+        font-size: 15px;
+        margin: 30px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 0 150px;
+
+    }
+
+    .About button {
+        color: rgb(8, 8, 51);
+        font-weight: bold;
+        padding: 15px 30px;
+        border-radius: 10px;
+
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .conferences {
+        background-color: rgb(215, 210, 221);
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        padding-bottom: 30px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .containers {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 40px;
+
+    }
+
+    .card1 {
+        outline: auto;
+        font-size: 20px;
+        padding: 10px;
+        box-shadow: 10px;
+        box-shadow: 0 0 20px black;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .card1 a {
+        color: rgb(25, 14, 53);
+        text-decoration: none;
+    }
+
+    .speakers {
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        color: rgb(114, 110, 109);
+
+    }
+
+    .Speakerpic {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+    }
+
+    .spk1 {
+        outline: auto;
+        text-align: center;
+        outline-color: rgb(217, 170, 255);
+        color: rgb(77, 119, 177);
+    }
+
+    .Speakerpic img {
+        display: flex;
+        height: 320px;
+
+    }
+
+    .Start {
+        background-color: rgb(215, 210, 221);
+        text-align: center;
+        font-size: 15px;
+        justify-content: center;
+        padding: 0 150px;
+        padding-bottom: 30px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .containers2 {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 40px;
+
+
+    }
+
+    .cardd {
+        outline: auto;
+        font-size: 20px;
+        padding: 10px;
+        box-shadow: 10px;
+        box-shadow: 0 0 20px black;
+        border-radius: 10px;
+        background-color: white;
+        font-size: 20px;
+
+    }
+
+    .cardd a {
+        color: rgb(20, 13, 72);
+        text-decoration: none;
+        outline: 2px solid black;
+        outline-offset: 5px;
+        border-radius: 5px;
+
+    }
+
+    .email {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        gap: 20px;
+        color: rgb(15, 11, 56);
+        text-align: right;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .right {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .right input {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .right button {
+        background-color: rgb(16, 16, 50);
+        color: white;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+
+    .footer1
+    {
+        background-color: rgb(39, 58, 111);
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+    }
+    .footer1 img
+    {
+        padding-top: 20px;
+        height: 50px;
+        width: auto;
+    }
+
+    .footlanding {
+        background-color: rgb(39, 58, 111);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: row;
+        font-size: 13px;
+        gap: 20px;
+        justify-content: center;
+        list-style-type: none;
+        padding: 20px;
+
+    }
+
+    .footlanding a:hover {
+        text-decoration: underline;
+    }
+
+    .footlanding a {   
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: flex;
+    }
+    .footer{
+        background-color: rgb(39, 58, 111);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+    hr{
+        color: white;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    
+</style>
+
+<body>
+    <div class="landing">
+        <li><a href="#about">About</a></li>
+        <li><a href="#conferences">Conferences</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#start">Sponsors</a></li>
+        <li><a href="#reg">Registration</a></li>
+    </div>
+
+    <div class="pic">
+        <h3>JOIN US FOR THE NEW 2023 CONFERENCES</h3>
+        <div class="button">
+            <button>Register Now</button>
+        </div>
+    </div>
+
+    <div class="About" id="about">
+        <h3 style="font-size: 30px;"">About</span></h3>
+        <p>Lorem ipsum dolor sit amet consectetur. Amet tristique vel nisi eget in tincidunt amet et vestibulum nulla
+            dui quam lacus erat. A sit sed eget diam orci. Sapien lacus malesuada pharetra ut amet nunc purus lacinia
+            molestie egestas non condimentum fermentum. Sit magna luctus imperdiet enim nibh consectetur vitae integer
+            sagittis rutrum vitae lacus varius erat. Tempor nec adipiscing enim consequat. Non id viverra est sed et
+            aliquet, suscipit mattis donec in.
+        </p>
+        <button>Read More</button>
+
+
+    </div>
+    <div class=" conferences" id="conferences">
+        <h3>Conferences</h3>
+        <p>Lorem ipsum dolor sit amet consectetur. Amet tristique vel nisi eget in tincidunt amet et vestibulum
+            nulla
+            dui quam lacus erat.</p>
+        <div class="containers">
+            <div class="card1">
+                <h3>Oklahoma City, OK</h3>
+                <p>22nd 26th February 2023</p>
+                <a href="">Read More</a>
+            </div>
+
+            <div class="card1">
+                <h3>Oklahoma City, OK</h3>
+                <p>22nd 26th February 2023</p>
+                <a href="">Read More</a>
+            </div>
+
+            <div class="card1">
+                <h3>Oklahoma City, OK</h3>
+                <p>22nd 26th February 2023</p>
+                <a href="">Read More</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="speakers" id="speakers">
+        <h2 style="color: rgb(40, 47, 255);">Speakers</h2>
+        <p>Lorem ipsum dolor sit amet consectetur. Amet tristique vel nisi eget. In ultricies amet sit vestibulum nulla
+            dui quam lacus erat.</p>
+        <div class="Speakerpic">
+            <div class="spk1">
+                <img src="spkr1.jpg" alt="">
+                <h4>Wade Warren</h4>
+                <p style="color: rgb(116, 116, 116); font-size: 15px;">Title</p>
+            </div>
+
+            <div class="spk1">
+                <img src="spkr2.jpg" alt="">
+                <h4>Jane Cooper</h4>
+                <p style="color: rgb(116, 116, 116); font-size: 15px; ">Title</p>
+            </div>
+
+            <div class="spk1">
+                <img src="spkr3.jpg" alt="">
+                <h4>Jenny Wilson</h4>
+                <p style="color: rgb(116, 116, 116); font-size: 15px; ">Title</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Start" id="start">
+        <h3 style="color: rgb(58, 58, 162); font-size: 25px;">Start your planning</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur. Amet tristique vel nisl eget. In ultricies amet sit vestibulum nulla
+            dui quam lacus erat. A sit sed sed eget diam at. Sapien lacus phasellus pharetra ut amet rutrum eu purus.
+            Lacinia massa egestas nam condimentum fermentum. Sit neque turpis imperdiet enim nibh consectetur vitae.
+            Integer sagittis rutrum vitae lacus viverra sed adipiscing enim consequat. Non id viverra sed elit aliquet
+            suscipit morbi donec in.
+        </p>
+
+        <div class="containers2">
+            <div class="cardd">
+                <h3>Oklahoma City, OK</h3>
+                <p>22nd 26th February 2023</p>
+                <a href="">Register</a>
+            </div>
+
+            <div class="cardd">
+                <h3>Oklahoma City, OK</h3>
+                <p>22nd 26th February 2023</p>
+                <a href="">Register</a>
+            </div>
+
+            <div class="cardd">
+                <h3>Oklahoma City, OK</h3>
+                <p>22nd 26th February 2023</p>
+                <a href="">Register</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="email" id="reg">
+        <div class="left">
+            <h3><span style="color: rgb(28, 131, 172);">NEWS</span>LETTER</h3>
+            <p>Enter your email ID & Subscribe to get the latest updates.</p>
+        </div>
+        <div class="right">
+            <form>
+                <input type="email" placeholder="emailid @email.com">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer1">
+        <img src="footer.png" alt="">
+        <h4>PERFORMANCE <br> <span style="color: rgb(38, 174, 211);"> MANAGEMENT </span> <br> REGIONAL ROUNDTABLE</h4>
+    </div>
+
+    <div class="footlanding">
+        <li><a href="#about">About</a></li>
+        <li><a href="#conferences">Conferences</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#start">Sponsors</a></li>
+        <li><a href="#reg">Registration</a></li>
+        <li><a href="#reg">Contact Us</a></li>
+        <li><a href="#reg">Terms & Conditions</a></li>
+    </div>
+    <div class="footer">
+        <p>COPYRIGHT © 2026. ALL RIGHTS RESERVED.</p>
+        
+    </div>
+    
+
+</body>
+
+</html>
